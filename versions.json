@@ -1,7 +1,4 @@
 {
-  "dns": "v2",
-  "alpha": "v3",
-  "beta": "v3",
-  "gamma": "v3",
-  "delta": "v2"
+  "dns": "v1",
+  "web2000": "v2"
 }

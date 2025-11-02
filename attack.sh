@@ -76,11 +76,7 @@ fn_up() {
     fn_upgrade
 
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
-    export RS_ALPHA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".alpha" |  tr -d '\n')
-    export RS_BETA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".beta" |  tr -d '\n')
-    export RS_GAMMA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".gamma" |  tr -d '\n')
-    export RS_DELTA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".delta" |  tr -d '\n')
-    export RS_EPSILON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".epsilon" |  tr -d '\n')
+    export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml up -d
 
@@ -90,11 +86,7 @@ fn_up() {
 fn_down() {
 
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
-    export RS_ALPHA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".alpha" |  tr -d '\n')
-    export RS_BETA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".beta" |  tr -d '\n')
-    export RS_GAMMA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".gamma" |  tr -d '\n')
-    export RS_DELTA_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".delta" |  tr -d '\n')
-    export RS_EPSILON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".epsilon" |  tr -d '\n')
+    export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml down
 

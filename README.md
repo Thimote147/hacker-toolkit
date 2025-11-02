@@ -19,8 +19,8 @@ This repository contains useful brute-force wordlists in the `wordlists` directo
 
 ## Main target
 
-Your main target is the local domain `rs.io`
-- IT IS NOT THE INTERNET DOMAIN "rs.io" (172.67.129.108/104.21.1.145)
+Your main target is the local domain `rogue-sentinels.io`
+- IT IS NOT THE INTERNET DOMAIN "rogue-sentinels.io" (172.67.129.108/104.21.1.145)
 - ALWAYS GO THROUGH THE LOCAL DNS RESOLVER 192.168.30.50
 
 ## The DNS is not working
@@ -29,13 +29,13 @@ To check if the DNS server is working, perform a basic DNS request to the local 
 
 ```sh
 # Try to perform a local DNS request with the command below. If the answer
-# does NOT contain "contact@rs.io", the Docker container is probably not 
+# does NOT contain "contact@rogue-sentinels.io", the Docker container is probably not 
 # started yet. Start with "./attack.sh up" or inspect with "docker ps".
-dig @192.168.30.50 rs.io
+dig @192.168.30.50 rogue-sentinels.io
 
 # Try to perform a local DNS request without specifying the Docker container.
-# If the answer does NOT contain "contact@rs.io", you workstation is not
+# If the answer does NOT contain "contact@rogue-sentinels.io", you workstation is not
 # configured properly: register the DNS server "192.168.30.50" and restart 
 # your network interface.
-dig rs.io
+dig rogue-sentinels.io
 ```
