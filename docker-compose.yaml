@@ -7,7 +7,6 @@ services:
     networks:
       production:
         ipv4_address: 192.168.30.50
-
   web2000:
     image: roguesentinels/web2000:${RS_WEB2000_VERSION}
     dns:
@@ -15,6 +14,14 @@ services:
     networks:
       production:
         ipv4_address: 192.168.30.2
+
+  salmon:
+    image: roguesentinels/salmon:${RS_SALMON_VERSION}
+    dns:
+      - 192.168.30.50
+    networks:
+      production:
+        ipv4_address: 192.168.30.3
 
 networks:
   production:

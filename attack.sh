@@ -77,6 +77,7 @@ fn_up() {
 
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
+    export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml up -d
 
@@ -87,6 +88,7 @@ fn_down() {
 
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
+    export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml down
 
