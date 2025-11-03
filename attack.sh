@@ -29,7 +29,7 @@ fn_help() {
 
 fn_upgrade() {
 
-    echo "Fetch latest versions"
+    echo "Fetch latest scenario versions"
     mkdir -p "$HOME/.roguesentinels"
     wget -q -O "$HOME/.roguesentinels/versions.json" https://raw.githubusercontent.com/RogueSentinels/hacker-toolkit/main/versions.json
     wget -q -O "$HOME/.roguesentinels/docker-compose.yaml" https://raw.githubusercontent.com/RogueSentinels/hacker-toolkit/main/docker-compose.yaml
@@ -78,10 +78,13 @@ fn_up() {
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
     export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
+    export RS_GEOSERVER_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".geoserver" |  tr -d '\n')
 
-    docker compose -f $HOME/.roguesentinels/docker-compose.yaml up -d
+    docker compose -f $HOME/.roguesentinels/docker-compose.yaml up -d "$@"
 
-    fn_dns-setup
+    if [[ "$*" != *"--skip-dns"* ]]; then
+        fn_dns-setup
+    fi
 }
 
 fn_down() {
@@ -89,10 +92,13 @@ fn_down() {
     export RS_DNS_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".dns" |  tr -d '\n')
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
     export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
+    export RS_GEOSERVER_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".geoserver" |  tr -d '\n')
 
-    docker compose -f $HOME/.roguesentinels/docker-compose.yaml down
+    docker compose -f $HOME/.roguesentinels/docker-compose.yaml down "$@"
 
-    fn_dns-disable
+    if [[ "$*" != *"--skip-dns"* ]]; then
+        fn_dns-disable
+    fi
 }
 
 fn_workstation-setup() {

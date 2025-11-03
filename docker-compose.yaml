@@ -23,6 +23,14 @@ services:
       production:
         ipv4_address: 192.168.30.3
 
+  geoserver:
+    image: roguesentinels/geoserver:${RS_GEOSERVER_VERSION}
+    dns:
+      - 192.168.30.50
+    networks:
+      production:
+        ipv4_address: 192.168.30.4
+
 networks:
   production:
     ipam:
