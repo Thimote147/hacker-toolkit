@@ -122,12 +122,18 @@ fn_workstation-setup() {
 
     echo -e "\e[1m\e[92m(2/5) Install Docker keyring\e[0m"
     sudo mkdir -p /etc/apt/keyrings
-    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-    sudo chmod a+r /etc/apt/keyrings/docker.gpg
-    
+    sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
+
     echo -e "\e[1m\e[92m(3/5) Add APT repository\e[0m"
-    printf "%s\n" "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" | sudo tee /etc/apt/sources.list.d/docker-ce.list
-    sudo apt update
+    sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/debian
+Suites: buster
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+    sudo apt-get update    
 
     echo -e "\e[1m\e[92m(4/5) Install Docker CE\e[0m"
     sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
