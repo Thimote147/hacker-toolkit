@@ -31,6 +31,22 @@ services:
       production:
         ipv4_address: 192.168.30.4
 
+  liberty:
+    image: roguesentinels/liberty:${RS_LIBERTY_VERSION}
+    dns:
+      - 192.168.30.50
+    networks:
+      production:
+        ipv4_address: 192.168.30.5
+
+  sum:
+    image: roguesentinels/sum:${RS_SUM_VERSION}
+    dns:
+      - 192.168.30.50
+    networks:
+      production:
+        ipv4_address: 192.168.30.6
+
 networks:
   production:
     ipam:

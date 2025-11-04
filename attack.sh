@@ -79,6 +79,8 @@ fn_up() {
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
     export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
     export RS_GEOSERVER_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".geoserver" |  tr -d '\n')
+    export RS_LIBERTY_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".liberty" |  tr -d '\n')
+    export RS_SUM_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".sum" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml up -d "$@"
 
@@ -93,6 +95,8 @@ fn_down() {
     export RS_WEB2000_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".web2000" |  tr -d '\n')
     export RS_SALMON_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".salmon" |  tr -d '\n')
     export RS_GEOSERVER_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".geoserver" |  tr -d '\n')
+    export RS_LIBERTY_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".liberty" |  tr -d '\n')
+    export RS_SUM_VERSION=$(cat $HOME/.roguesentinels/versions.json | jq -r ".sum" |  tr -d '\n')
 
     docker compose -f $HOME/.roguesentinels/docker-compose.yaml down "$@"
 

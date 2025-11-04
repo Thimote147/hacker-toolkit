@@ -2,5 +2,7 @@
   "dns": "v2",
   "web2000": "v2",
   "salmon": "v2",
-  "geoserver": "v1"
+  "geoserver": "v1",
+  "liberty": "v1",
+  "sum": "v1"
 }
