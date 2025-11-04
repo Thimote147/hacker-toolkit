@@ -20,7 +20,7 @@ This repository contains useful brute-force wordlists in the `wordlists` directo
 ## Main target
 
 Your main target is the local domain `rogue-sentinels.io`
-- IT IS NOT THE INTERNET DOMAIN "rogue-sentinels.io" (172.67.129.108/104.21.1.145)
+- IT IS NOT THE INTERNET DOMAIN "rogue-sentinels.io"
 - ALWAYS GO THROUGH THE LOCAL DNS RESOLVER 192.168.30.50
 
 ## The DNS is not working
