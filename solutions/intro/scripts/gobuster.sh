@@ -1,0 +1,1 @@
+gobuster dns --domain rogue-sentinels.io -w common_subdomains.txt -t 50

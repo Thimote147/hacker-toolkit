@@ -1,0 +1,1 @@
+nmap -sS -p- -T4 dns.rogue-sentinels.io fileserver.rogue-sentinels.io restricted.rogue-sentinels.io staging.rogue-sentinels.io travel.rogue-sentinels.io webservices.rogue-sentinels.io
