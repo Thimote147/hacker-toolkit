@@ -1,0 +1,1 @@
+dirbuster -u http://fileserver.rogue-sentinels.io:8080 -w common_urls.txt
