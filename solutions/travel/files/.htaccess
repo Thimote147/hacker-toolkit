@@ -1,7 +1,19 @@
-# /var/www/html/
+# /var/www/html/.htaccess
 # Prevent direct access to PHP files in this directory
 <FilesMatch "\.php$">
     Order allow,deny
     Deny from all
 </FilesMatch>
 
+# /var/www/html/salmon-uploads/.htaccess
+# Autorize ONLY true image files
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Block everything else
+<FilesMatch ".*">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
