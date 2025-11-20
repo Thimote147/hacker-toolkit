@@ -1,4 +1,7 @@
+# /var/www/html/
+# Prevent direct access to PHP files in this directory
 <FilesMatch "\.php$">
     Order allow,deny
     Deny from all
 </FilesMatch>
+
