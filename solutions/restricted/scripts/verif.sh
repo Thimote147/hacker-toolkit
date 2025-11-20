@@ -1,0 +1,1 @@
+curl http://restricted.rogue-sentinels.io:64375/
