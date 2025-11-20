@@ -1,0 +1,1 @@
+nmap -sS -p- -T4 staging.rogue-sentinels.io
