@@ -1,0 +1,9 @@
+# Identifier le type de hash
+echo "00b39b8be62c67284bbb157e7143e4ef796f061ca75f6e1d06a5123ab1e5144c" | wc -c
+# 65 caractères (64 + newline) = SHA-256
+
+# Vérification avec hash-identifier
+hash-identifier 00b39b8be62c67284bbb157e7143e4ef796f061ca75f6e1d06a5123ab1e5144c
+# Possible Hashs:
+# [+] SHA-256
+# [+] Haval-256
