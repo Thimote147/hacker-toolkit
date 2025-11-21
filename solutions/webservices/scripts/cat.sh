@@ -1,0 +1,1 @@
+root@bcd692aa0310:/opt/geoserver# cat ADMIN_CREDENTIALS.txt
