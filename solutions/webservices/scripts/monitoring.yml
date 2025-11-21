@@ -1,0 +1,8 @@
+# Prometheus alerting rules
+    - alert: GeoServerExploitAttempt
+      expr: increase(geoserver_wfs_requests_total{method="POST"}[5m]) > 100
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: "Possible CVE-2024-36401 exploitation attempt"
