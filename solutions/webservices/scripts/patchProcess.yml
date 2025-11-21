@@ -1,0 +1,5 @@
+# Politique de mise à jour
+   - CVE Critique (CVSS >= 9.0): 24h maximum
+   - CVE Élevée (CVSS 7.0-8.9): 7 jours maximum
+   - CVE Moyenne (CVSS 4.0-6.9): 30 jours maximum
+   - CVE Faible (CVSS < 4.0): Prochain cycle de maintenance maximum
