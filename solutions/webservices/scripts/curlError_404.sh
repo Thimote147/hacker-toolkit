@@ -1,0 +1,1 @@
+curl http://webservices.rogue-sentinels.io:8080/
